@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Medical Information Form</h2>
+
+        <!-- Step 1: Basic Details -->
+        <div id="step1">
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Date of Birth:</label>
+            <input type="date">
+
+            <label>Age:</label>
+            <input type="number" placeholder="Enter your age">
+
+            <label>Gender:</label>
+            <select>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Blood Group:</label>
+            <input type="text" placeholder="A+, B+, etc.">
+
+            <label>Country:</label>
+            <select>
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div class="button-group">
+                <button onclick="nextStep(2)">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Medical History -->
+        <div id="step2" class="hidden">
+            <h3>Medical History</h3>
+
+            <label>Current Medications:</label>
+            <input type="text" placeholder="List medications">
+
+            <label>Allergies:</label>
+            <input type="text" placeholder="Any allergies?">
+
+            <label>Past Surgeries:</label>
+            <input type="text" placeholder="List surgeries">
+
+            <div class="button-group">
+                <button onclick="prevStep(1)">Back</button>
+                <button onclick="nextStep(3)">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Family Medical History -->
+        <div id="step3" class="hidden">
+            <h3>Family Medical History</h3>
+
+            <label>Family History of Cancer:</label>
+            <input type="text" placeholder="Yes / No / Details">
+
+            <label>Family History of Diabetes:</label>
+            <input type="text" placeholder="Yes / No / Details">
+
+            <label>Family History of Heart Conditions:</label>
+            <input type="text" placeholder="Yes / No / Details">
+
+            <label>Other Genetic Conditions:</label>
+            <input type="text" placeholder="List conditions">
+
+            <div class="button-group">
+                <button onclick="prevStep(2)">Back</button>
+                <button onclick="nextStep(4)">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Lifestyle Information -->
+        <div id="step4" class="hidden">
+            <h3>Lifestyle Information</h3>
+
+            <label>Do you smoke?</label>
+            <select>
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Do you drink alcohol?</label>
+            <select>
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Exercise Routine:</label>
+            <input type="text" placeholder="Daily / Weekly">
+
+            <div class="button-group">
+                <button onclick="prevStep(3)">Back</button>
+                <button onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.getElementById('step' + (step - 1)).classList.add('hidden');
+            document.getElementById('step' + step).classList.remove('hidden');
+        }
+
+        function prevStep(step) {
+            document.getElementById('step' + (step + 1)).classList.add('hidden');
+            document.getElementById('step' + step).classList.remove('hidden');
+        }
+
+        function submitForm() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+
+</body>
+</html>
