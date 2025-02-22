@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Data</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.shutterstock.com/image-photo/facial-cosmetics-skin-care-product-260nw-1408880111.jpg') no-repeat center center/cover;
+        }
+        .container {
+            width: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PCOS Data</h2>
+        <form>
+            <label>Pulse Rate (bpm):</label>
+            <input type="number" min="0">
+            
+            <label>RR (breaths per minute):</label>
+            <input type="number" min="0">
+            
+            <label>Period Cycle (days):</label>
+            <input type="number" min="0">
+            
+            <label>Cycle Length (days):</label>
+            <input type="number" min="0">
+            
+            <label>Marriage Status:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Pregnant:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Number of Abortions:</label>
+            <input type="number" min="0">
+            
+            <label>Hip (inches):</label>
+            <input type="number" min="0">
+            
+            <label>Waist (inches):</label>
+            <input type="number" min="0" id="waist">
+            
+            <label>Waist-to-Hip Ratio:</label>
+            <input type="text" id="ratio" readonly>
+            
+            <label>Weight Gain:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Hair Growth:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Skin Darkening:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Hair Loss:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Pimples:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Fast Food:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Regular Exercise:</label>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <div class="buttons">
+                <button type="button">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
